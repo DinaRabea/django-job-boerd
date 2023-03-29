@@ -13,7 +13,7 @@ def all_jobs(request):
     return render(request,'jobs/jobs.html',context)
 
 
-def show_job(request,id):
-    job=Job.objects.get(id=id)
+def show_job(request,slug):
+    job=Job.objects.get(slug=slug)
     context={'job':job}
     return render(request,'jobs/job_details.html',context)
